@@ -1,1 +1,35 @@
-<p>recipe-detail works!</p>
+<div  class=" m-5 p-5 card " *ngIf="selectedrecipe; else InfoText">
+<div class="row">
+    <div class="col-6  " >
+        <img [src]="selectedrecipe.imagePath" alt="" class="img-fluid w-75 shadow rounded">
+    </div>
+
+
+    <div class="col-6">
+        <h1>{{selectedrecipe.name}}</h1>
+  
+        <div class="dropdown my-2">
+            <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  (click)="changedropdown()">
+              Dropdown link
+            </a>
+          
+            <div class="dropdown-menu " [ngClass]="{'d-block': dropdown}" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        
+    
+        <h4>{{selectedrecipe.desc}}</h4>
+  
+        <h4>Ingridents</h4>
+
+    </div>
+</div>
+
+    
+</div>
+<ng-template #InfoText >
+    <p  class=" m-5 p-5 card">PLZ SELECT RECIPE</p>
+</ng-template>
