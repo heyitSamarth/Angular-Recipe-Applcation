@@ -14,16 +14,22 @@
             </a>
           
             <div class="dropdown-menu " [ngClass]="{'d-block': dropdown}" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" style="cursor: pointer;" (click)="addToShoppingList()">Add to Shopping List</a>
+              <a class="dropdown-item" href="#">Edit Recipe</a>
+              <a class="dropdown-item" href="#">Delete Recipe</a>
             </div>
           </div>
         
     
         <h4>{{selectedrecipe.desc}}</h4>
   
-        <h4>Ingridents</h4>
+        <div class="list-group">
+          <div class="list-group-item" 
+          *ngFor="let ingridients of selectedrecipe.ingredients">
+                {{ingridients.name }} - ({{ingridients.amount}})
+          </div>
+
+        </div>
 
     </div>
 </div>

@@ -1,6 +1,9 @@
-<a class="list-group-item d-flex justify-content-between my-2 border rounded"
-(click)="onSelected()">
-    <div class="w-75">
+<a
+[routerLink]="['/recipe',index]" 
+routerLinkActive="active"
+ class="list-group-item d-flex justify-content-between my-2 border rounded"
+>
+    <div class="w-75"   >
         <h4 class="list-group-item-heading">{{recipe.name}}</h4 >
         <p class="list-group-item-text">{{recipe.desc}}</p>
     </div>

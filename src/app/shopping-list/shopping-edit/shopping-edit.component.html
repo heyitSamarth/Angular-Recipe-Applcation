@@ -1,20 +1,20 @@
 <div class="row">
     <div class="col-xs-12">
-        <form >
-        <!-- (ngSubmit)="onSubmit()"
-        > -->
+        <form 
+        (ngSubmit)="onSubmit()"
+        >
             <div class="row">
                 <div class="col-sm-5 form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name"class="form-control"     [(ngModel)]="name"  required="true">
+                    <input type="text" id="name" name="name"class="form-control"  required="true"   [(ngModel)]="name"  >
                 </div>
                 <div class="col-sm-3 form-group">
                     <label for="amount">Amount</label>
-                    <input type="number" id="amount" name="amount" class="form-control" [(ngModel)]="amount"  required="true"  >
+                    <input type="number" id="amount" name="amount" class="form-control" required="true " [(ngModel)]="amount" >
                 </div>
                 <div class="row">
                     <div class="col-xs-12 my-2">
-                        <button class="btn btn-success" type="submit"  (click)="onSubmit()" >Add</button>
+                        <button class="btn btn-success" type="submit" >Add</button>
                         <button class="btn btn-danger m-2">Delete</button>
                         <button class="btn btn-primary">Clear</button>
 
