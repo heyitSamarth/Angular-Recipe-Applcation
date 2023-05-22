@@ -14,15 +14,17 @@ const routes: Routes = [
     path: 'recipe',
     component: RecipesComponent,
     children: [
-      { path: '', component: RecipeStartComponent },
+      { path: '', component: RecipeStartComponent , pathMatch: 'full'},
+      { path: 'new', component: RecipesComponent },
       { path: ':id', component: RecipeDetailComponent },
-      { path: 'add', component: RecipesComponent },
+      { path: ':id/edit', component: RecipeDetailComponent },
     ],
+    // canActivate:["takes differnt guards"]
   },
   { path: 'shopping-list', component: ShoppingListComponent },
   {
     path: 'not-found',
-    component: NotFoundComponent,
+    component: NotFoundComponent,data:{message:'404 Page Not Found '}
   },
   {
     path: '**',

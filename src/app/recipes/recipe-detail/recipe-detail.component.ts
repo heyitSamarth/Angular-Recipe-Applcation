@@ -30,6 +30,11 @@ export class RecipeDetailComponent {
         this.selectedrecipe=this.recipeservice.getRecipe(this.id)
       }
     )
+    // this.recipeservice.selectedrecipe.subscribe(
+    //   (recipe:Recipe)=>{ this.selectedrecipe=recipe
+
+    //   }
+    // )
      
     
 
